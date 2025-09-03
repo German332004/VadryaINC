@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - NexusDev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h2>Nexus<span>Dev</span></h2>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="servicios.html" class="nav-link">Servicios</a></li>
+                    <li><a href="portafolio.html" class="nav-link active">Portafolio</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li><a href="contacto.html" class="btn nav-cta">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section Mejorada -->
+    <section class="hero-enhanced">
+        <div class="hero-particles" id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content-enhanced" data-aos="fade-up" data-aos-delay="300">
+                <div class="hero-text-group">
+                    <h1 class="hero-title-enhanced">
+                        <span class="title-line">Nuestro <span class="text-gradient">Portafolio</span></span>
+                    </h1>
+                    <p class="hero-description-enhanced">Descubre algunos de nuestros proyectos más destacados y cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos digitales.</p>
+                    <div class="hero-buttons-enhanced">
+                        <a href="contacto.html" class="btn btn-primary btn-large">
+                            <span>¿Tienes un proyecto?</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </a>
+                        <a href="servicios.html" class="btn btn-secondary btn-large">
+                            <span>Nuestros servicios</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual-enhanced" data-aos="fade-left" data-aos-delay="500">
+                    <div class="hero-visual-container">
+                        <div class="visual-element-enhanced"></div>
+                        <div class="floating-card card-1">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Desarrollo Web</p>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Apps Móviles</p>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-shopping-cart"></i>
+                            <p>E-commerce</p>
+                        </div>
+                        <div class="floating-card card-4">
+                            <i class="fas fa-paint-brush"></i>
+                            <p>Diseño UX/UI</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="portfolio-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid-section">
+        <div class="container">
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder"></div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="action-btn" title="Ver proyecto"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="action-btn" title="Visitar sitio web"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Plataforma Educativa</h3>
+                        <p>Sistema de aprendizaje en línea con dashboard interactivo para estudiantes y profesores.</p>
+                        <div class="portfolio-tags">
+                            <span>Web</span>
+                            <span>React</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder"></div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="action-btn" title="Ver proyecto"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="action-btn" title="Visitar sitio web"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>App de Fitness</h3>
+                        <p>Aplicación móvil para seguimiento de entrenamientos y planificación nutricional.</p>
+                        <div class="portfolio-tags">
+                            <span>Mobile</span>
+                            <span>React Native</span>
+                            <span>Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="ecommerce" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder"></div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="action-btn" title="Ver proyecto"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="action-btn" title="Visitar sitio web"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Tienda Online</h3>
+                        <p>E-commerce completo con carrito de compras, pasarela de pagos y panel administrativo.</p>
+                        <div class="portfolio-tags">
+                            <span>E-commerce</span>
+                            <span>WordPress</span>
+                            <span>WooCommerce</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder"></div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="action-btn" title="Ver proyecto"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="action-btn" title="Visitar sitio web"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Dashboard Analytics</h3>
+                        <p>Panel de control para visualización y análisis de datos empresariales en tiempo real.</p>
+                        <div class="portfolio-tags">
+                            <span>Web</span>
+                            <span>Vue.js</span>
+                            <span>D3.js</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder"></div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="action-btn" title="Ver proyecto"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="action-btn" title="Visitar sitio web"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Identidad Corporativa</h3>
+                        <p>Rediseño de marca completa para empresa de tecnología, incluyendo logo y manual de marca.</p>
+                        <div class="portfolio-tags">
+                            <span>Branding</span>
+                            <span>Diseño</span>
+                            <span>UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mobile" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-image">
+                        <div class="image-placeholder"></div>
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-actions">
+                                <a href="#" class="action-btn" title="Ver proyecto"><i class="fas fa-eye"></i></a>
+                                <a href="#" class="action-btn" title="Visitar sitio web"><i class="fas fa-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>App de Delivery</h3>
+                        <p>Aplicación de entrega de alimentos con seguimiento en tiempo real y sistema de calificaciones.</p>
+                        <div class="portfolio-tags">
+                            <span>Mobile</span>
+                            <span>Flutter</span>
+                            <span>Google Maps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <p class="section-subtitle">Testimonios de proyectos exitosos</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"NexusDev transformó por completo nuestra presencia digital. Su equipo profesional entregó un sitio web que superó todas nuestras expectativas."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <div class="image-placeholder"></div>
+                            </div>
+                            <div class="author-info">
+                                <h4>María González</h4>
+                                <p>CEO, TechSolutions</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"La aplicación móvil que desarrollaron ha sido fundamental para el crecimiento de nuestro negocio. ¡Los recomiendo totalmente!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <div class="image-placeholder"></div>
+                            </div>
+                            <div class="author-info">
+                                <h4>Carlos Mendoza</h4>
+                                <p>Director, FitLife</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <div class="testimonial-text">
+                            <p>"Trabajar con NexusDev fue una experiencia excepcional. Su atención al detalle y compromiso con el proyecto fueron impresionantes."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <div class="image-placeholder"></div>
+                            </div>
+                            <div class="author-info">
+                                <h4>Ana Rodríguez</h4>
+                                <p>Gerente, EduTech</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>¿Te gustaría tener un proyecto similar?</h2>
+                <p>Contáctanos y hagamos realidad tu idea.</p>
+                <a href="contacto.html" class="btn btn-primary">
+                    <span>Iniciar proyecto</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nexus<span>Dev</span></h3>
+                    <p>Soluciones digitales a medida para tu negocio.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="portafolio.html">Portafolio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="servicios.html">Desarrollo Web</a></li>
+                        <li><a href="servicios.html">Apps Móviles</a></li>
+                        <li><a href="servicios.html">Estrategias Digitales</a></li>
+                        <li><a href="servicios.html">Consultoría</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@nexusdev.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NexusDev. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/portafolio.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - NexusDev</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Cursor personalizado -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h2>Nexus<span>Dev</span></h2>
+            </div>
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="servicios.html" class="nav-link active">Servicios</a></li>
+                    <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
+                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li><a href="contacto.html" class="btn nav-cta">Contacto</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section Mejorada -->
+    <section class="hero-enhanced">
+        <div class="hero-particles" id="particles-js"></div>
+        <div class="container">
+            <div class="hero-content-enhanced" data-aos="fade-up" data-aos-delay="300">
+                <div class="hero-text-group">
+                    <h1 class="hero-title-enhanced">
+                        <span class="title-line">Nuestros <span class="text-gradient">Servicios</span></span>
+                    </h1>
+                    <p class="hero-description-enhanced">Ofrecemos soluciones digitales integrales para impulsar tu negocio en el mundo digital con tecnología de vanguardia.</p>
+                    <div class="hero-buttons-enhanced">
+                        <a href="contacto.html" class="btn btn-primary btn-large">
+                            <span>Solicitar cotización</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="portafolio.html" class="btn btn-secondary btn-large">
+                            <span>Ver portafolio</span>
+                            <i class="fas fa-briefcase"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual-enhanced" data-aos="fade-left" data-aos-delay="500">
+                    <div class="hero-visual-container">
+                        <div class="visual-element-enhanced"></div>
+                        <div class="floating-card card-1">
+                            <i class="fas fa-laptop-code"></i>
+                            <p>Desarrollo Web</p>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-mobile-alt"></i>
+                            <p>Apps Móviles</p>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Estrategia Digital</p>
+                        </div>
+                        <div class="floating-card card-4">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>Consultoría</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="services-detail">
+        <div class="container">
+            <div class="services-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="web">Desarrollo Web</button>
+                    <button class="tab-btn" data-tab="mobile">Apps Móviles</button>
+                    <button class="tab-btn" data-tab="strategy">Estrategia Digital</button>
+                    <button class="tab-btn" data-tab="consulting">Consultoría</button>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="web">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <img src="img/servicios/desarrollo-web.jpg" alt="Desarrollo web moderno y responsive" class="tab-img">
+                            </div>
+                            <div class="tab-info">
+                                <h2>Desarrollo Web</h2>
+                                <p>Creación de sitios web y aplicaciones web modernas, responsivas y de alto rendimiento. Utilizamos las últimas tecnologías para garantizar que tu presencia web sea impactante y funcional.</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Diseño web responsivo</li>
+                                    <li><i class="fas fa-check"></i> Desarrollo frontend y backend</li>
+                                    <li><i class="fas fa-check"></i> E-commerce y carritos de compra</li>
+                                    <li><i class="fas fa-check"></i> Optimización SEO</li>
+                                    <li><i class="fas fa-check"></i> Integración de APIs</li>
+                                </ul>
+                                <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="mobile">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <img src="img/servicios/apps-moviles.jpg" alt="Desarrollo de aplicaciones móviles" class="tab-img">
+                            </div>
+                            <div class="tab-info">
+                                <h2>Apps Móviles</h2>
+                                <p>Desarrollo de aplicaciones nativas e híbridas para iOS y Android. Creamos experiencias móviles intuitivas que conectan con tus usuarios y generan valor para tu negocio.</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Apps nativas para iOS y Android</li>
+                                    <li><i class="fas fa-check"></i> Desarrollo de apps híbridas</li>
+                                    <li><i class="fas fa-check"></i> Diseño UI/UX móvil</li>
+                                    <li><i class="fas fa-check"></i> Integración con servicios web</li>
+                                    <li><i class="fas fa-check"></i> Publicación en stores</li>
+                                </ul>
+                                <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="strategy">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <img src="img/servicios/estrategias-digitales.jpg" alt="Estrategias digitales" class="tab-img">
+                            </div>
+                            <div class="tab-info">
+                                <h2>Estrategia Digital</h2>
+                                <p>Planificación y ejecución de estrategias digitales para el éxito de tu proyecto. Analizamos, diseñamos e implementamos soluciones que maximizan tu ROI.</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Planificación estratégica digital</li>
+                                    <li><i class="fas fa-check"></i> Análisis de mercado y competencia</li>
+                                    <li><i class="fas fa-check"></i> Definición de KPIs y métricas</li>
+                                    <li><i class="fas fa-check"></i> Roadmap de producto</li>
+                                    <li><i class="fas fa-check"></i> Optimización de conversiones</li>
+                                </ul>
+                                <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="consulting">
+                        <div class="tab-content-inner">
+                            <div class="tab-image">
+                                <img src="img/servicios/consultoria.jpg" alt="Consultoría tecnológica" class="tab-img">
+                            </div>
+                            <div class="tab-info">
+                                <h2>Consultoría Tecnológica</h2>
+                                <p>Asesoramiento especializado para la transformación digital de tu empresa. Te ayudamos a tomar las decisiones tecnológicas correctas para alcanzar tus objetivos.</p>
+                                <ul>
+                                    <li><i class="fas fa-check"></i> Auditoría tecnológica</li>
+                                    <li><i class="fas fa-check"></i> Arquitectura de software</li>
+                                    <li><i class="fas fa-check"></i> Migración y modernización</li>
+                                    <li><i class="fas fa-check"></i> Seguridad informática</li>
+                                    <li><i class="fas fa-check"></i> Scalability planning</li>
+                                </ul>
+                                <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Nuestro Proceso</h2>
+                <p class="section-subtitle">Cómo trabajamos para garantizar el éxito de tu proyecto</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">01</div>
+                    <h3>Consulta</h3>
+                    <p>Analizamos tus necesidades y objetivos para entender tu proyecto.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">02</div>
+                    <h3>Planificación</h3>
+                    <p>Diseñamos una estrategia detallada con cronograma y presupuesto.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">03</div>
+                    <h3>Desarrollo</h3>
+                    <p>Implementamos la solución con metodologías ágiles y iterativas.</p>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">04</div>
+                    <h3>Lanzamiento</h3>
+                    <p>Desplegamos tu proyecto y garantizamos su correcto funcionamiento.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <h2>¿Listo para comenzar tu proyecto?</h2>
+                <p>Contáctanos hoy mismo y recibe una consultoría gratuita para tu idea.</p>
+                <a href="contacto.html" class="btn btn-primary">
+                    <span>Contactar ahora</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Nexus<span>Dev</span></h3>
+                    <p>Soluciones digitales a medida para tu negocio.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="portafolio.html">Portafolio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="servicios.html">Desarrollo Web</a></li>
+                        <li><a href="servicios.html">Apps Móviles</a></li>
+                        <li><a href="servicios.html">Estrategias Digitales</a></li>
+                        <li><a href="servicios.html">Consultoría</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</li>
+                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+                        <li><i class="fas fa-envelope"></i> info@nexusdev.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 NexusDev. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/servicios.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</body>
+</html>

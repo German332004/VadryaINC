@@ -1,0 +1,124 @@
+// Navegación móvil
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navList = document.querySelector('.nav-list');
+    const cursorDot = document.querySelector('[data-cursor-dot]');
+    const cursorOutline = document.querySelector('[data-cursor-outline]');
+    
+    // Cursor personalizado
+    document.addEventListener('mousemove', function(e) {
+        const posX = e.clientX;
+        const posY = e.clientY;
+        
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+        
+        cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+        }, { duration: 500, fill: 'forwards' });
+    });
+    
+    // Efectos de hover para el cursor
+    const hoverElements = document.querySelectorAll('a, button, .service-card, .portfolio-item, .team-member');
+    
+    hoverElements.forEach(element => {
+        element.addEventListener('mouseenter', function() {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+            cursorOutline.style.borderWidth = '1px';
+        });
+        
+        element.addEventListener('mouseleave', function() {
+            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+            cursorOutline.style.borderWidth = '2px';
+        });
+    });
+    
+    // Navegación móvil
+    hamburger.addEventListener('click', function() {
+        navList.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+    
+    // Cerrar menú al hacer clic en un enlace
+    const navLinks = document.querySelectorAll('.nav-list a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            navList.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+    
+    // Animación de scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Contador de estadísticas
+    const startCounters = function() {
+        const counters = document.querySelectorAll('.stat-number');
+        const speed = 200;
+        
+        counters.forEach(counter => {
+            const target = +counter.getAttribute('data-count');
+            const count = +counter.innerText;
+            const increment = Math.ceil(target / speed);
+            
+            if (count < target) {
+                counter.innerText = Math.min(count + increment, target);
+                setTimeout(startCounters, 1);
+            }
+        });
+    };
+    
+    // Iniciar contadores cuando están en viewport
+    const aboutSection = document.querySelector('.about');
+    let counted = false;
+    
+    const checkCounters = function() {
+        const aboutPosition = aboutSection.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.3;
+        
+        if (aboutPosition < screenPosition && !counted) {
+            startCounters();
+            counted = true;
+        }
+    };
+    
+    // Animación de elementos al hacer scroll
+    const animateOnScroll = function() {
+        const elements = document.querySelectorAll('[data-aos]');
+        
+        elements.forEach(element => {
+            const elementPosition = element.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (elementPosition < screenPosition) {
+                element.classList.add('aos-animate');
+            }
+        });
+        
+        checkCounters();
+    };
+    
+    window.addEventListener('scroll', function() {
+        animateOnScroll();
+    });
+    
+    // Ejecutar una vez al cargar la página
+    animateOnScroll();
+});
