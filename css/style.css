@@ -2,10 +2,12 @@
 :root {
     /* Colores de la paleta */
     --black: #19191c;
-    --pink: #07bdff;
-    --violet: #050e81;
+    --pink: #06b2f1;
+    --violet: #010655;
     --gray-dark: #1f3428;
     --white: #ffffff;
+    --purple: #b1f8c7;
+    --red: #232ef5;   
     
     /* Variantes de colores */
     --black-dark: #07bdff;
@@ -22,6 +24,7 @@
     --gradient-secondary: linear-gradient(135deg, var(--pink), var(--violet));
     --gradient-alternative: linear-gradient(135deg, var(--violet), var(--pink));
     --gradient-warning: linear-gradient(135deg, var(--pink), var(--violet-dark));
+    --gradient-title: linear-gradient(135deg, var(--purple), var(--red));
     
     --shadow: 0 10px 30px rgba(16, 17, 22, 0.15);
     --shadow-hover: 0 20px 40px rgba(16, 17, 22, 0.2);
@@ -378,15 +381,27 @@ body {
     font-weight: 800;
     margin-bottom: 1.5rem;
     line-height: 1.1;
+                
 }
-.hero-title-enhanced .title-line { display: block; }
+
+.hero-title-enhanced .title-line { 
+        text-shadow: 0 0 10px rgba(7, 189, 255, 0.5),
+                 0 0 20px rgba(7, 189, 255, 0.3),
+                 0 0 30px rgba(7, 189, 255, 0.2);
+    animation: title-glow 2s ease-in-out infinite alternate;
+    
+}
 .hero-title-enhanced .text-gradient {
-    background: var(--gradient-secondary);
+    background: var(--gradient-title);
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
+    color:rgba(0, 0, 0, 0.1);
     position: relative;
     display: inline-block;
+text-shadow:
+
+                 0 0 30px rgba(17, 17, 17, 0.5);
+ 
 }
 .hero-title-enhanced .text-gradient::after {
     content: '';
