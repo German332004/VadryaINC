@@ -1756,6 +1756,13 @@ section {
     .about-stats {
         grid-template-columns: 1fr;
     }
+    
+    .floating-card {
+        width: 90%;
+        max-width: 260px;
+        font-size: 0.95rem;
+        padding: 10px 12px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -1771,14 +1778,26 @@ section {
         grid-template-columns: 1fr;
     }
     
-    .floating-card {
-        position: relative;
-        margin-bottom: 15px;
-        animation: none;
+    .hero-visual-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        position: static;
+        width: 100%;
+        height: auto;
+        justify-items: center;
+        align-items: center;
     }
-    
-    .card-1, .card-2, .card-3 {
-        position: relative;
+    .floating-card {
+        position: static;
+        margin-bottom: 0;
+        animation: none;
+        width: 98%;
+        max-width: 140px;
+        font-size: 0.8rem;
+        padding: 8px 8px;
+    }
+    .card-1, .card-2, .card-3, .card-4 {
         top: auto;
         left: auto;
         right: auto;
@@ -1786,50 +1805,9 @@ section {
         transform: none;
     }
     
-    .hero-image {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        margin-top: 30px;
-    }
-    
-    .visual-element {
+    .visual-element-enhanced {
         display: none;
     }
-    
-    .contact-form {
-        padding: 20px;
-    }
-}
-.tab-content-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0px;
-    align-items: center;
-    min-height: 500px; /* Altura mínima para igualar ambas columnas */
-}
-
-.tab-image {
-    width: 80%;
-    height: 80%;
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-}
-
-.tab-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Esto hace que la imagen cubra todo el espacio */
-    transition: transform 0.5s ease;
-}
-
-.tab-content-inner:hover .tab-img {
-    transform: scale(1.05);
 }
 
 /* Responsive */
