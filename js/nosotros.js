@@ -37,10 +37,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Navegación móvil
-    hamburger.addEventListener('click', function() {
-        navList.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
+    if (hamburger && navList) {
+        hamburger.addEventListener('click', function() {
+            navList.classList.toggle('active');
+        });
+    }
     
     // Cerrar menú al hacer clic en un enlace
     const navLinks = document.querySelectorAll('.nav-list a');
