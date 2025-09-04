@@ -1,7 +1,6 @@
 // Navegación móvil
 document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.querySelector('.hamburger');
-    const navList = document.querySelector('.nav-list');
+
     const cursorDot = document.querySelector('[data-cursor-dot]');
     const cursorOutline = document.querySelector('[data-cursor-outline]');
     
@@ -36,12 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Navegación móvil
-    if (hamburger && navList) {
-        hamburger.addEventListener('click', function() {
-            navList.classList.toggle('active');
-        });
-    }
     
     // Cerrar menú al hacer clic en un enlace
     const navLinks = document.querySelectorAll('.nav-list a');
