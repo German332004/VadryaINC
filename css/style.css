@@ -346,7 +346,7 @@ body {
 /* HERO SECTION MEJORADO */
 /* ==================== */
 .hero-enhanced {
-    padding: 120px 0 80px;
+    padding: 120px 0 50px;
     position: relative;
     overflow: hidden;
     background: linear-gradient(135deg, var(--black) 0%, var(--black-dark) 100%);
