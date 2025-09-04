@@ -151,11 +151,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    align-items: center;
+    padding: 10px 20px;
+    height: 70px;
 }
 
 .logo h2 {
     font-size: 1.8rem;
+    align-items: center;
     font-weight: 800;
     color: var(--black);
 }
@@ -170,6 +173,7 @@ body {
 .nav-list {
     display: flex;
     list-style: none;
+    align-items: center;
 }
 
 .nav-list li {
