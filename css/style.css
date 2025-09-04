@@ -6,8 +6,9 @@
     --violet: #010655;
     --gray-dark: #1f3428;
     --white: #ffffff;
-    --purple: #b1f8c7;
-    --red: #232ef5;   
+    --purple: #f80b42;
+    --red: #f7fafd; 
+    --blue: #760fec;  
     
     /* Variantes de colores */
     --black-dark: #07bdff;
@@ -24,7 +25,7 @@
     --gradient-secondary: linear-gradient(135deg, var(--pink), var(--violet));
     --gradient-alternative: linear-gradient(135deg, var(--violet), var(--pink));
     --gradient-warning: linear-gradient(135deg, var(--pink), var(--violet-dark));
-    --gradient-title: linear-gradient(135deg, var(--purple), var(--red));
+    --gradient-title: linear-gradient(135deg, var(--purple), var(--red), var(--blue));
     
     --shadow: 0 10px 30px rgba(16, 17, 22, 0.15);
     --shadow-hover: 0 20px 40px rgba(16, 17, 22, 0.2);
@@ -426,6 +427,8 @@ text-shadow:
     margin-right: auto;
     opacity: 0.9;
     line-height: 1.6;
+    text-shadow:
+    0 0 30px rgba(9, 9, 9, 0.5);
 }
 .hero-buttons-enhanced {
     display: flex;
