@@ -130,10 +130,10 @@ document.addEventListener('DOMContentLoaded', function() {
         particlesJS('particles-js', {
             particles: {
                 number: {
-                    value: 1000,
+                    value: 700,
                     density: {
                         enable: true,
-                        value_area: 2000
+                        value_area: 1400
                     }
                 },
                 color: {
@@ -151,8 +151,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     random: true,
                     anim: {
                         enable: true,
-                        speed: 1,
-                        opacity_min: 0.1,
+                        speed: 0.5,
+                        opacity_min: 1,
                         sync: false
                     }
                 },
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     random: true,
                     anim: {
                         enable: true,
-                        speed: 2,
+                        speed: 1,
                         size_min: 0.3,
                         sync: false
                     }
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 move: {
                     enable: true,
-                    speed: 0.5,
+                    speed: 0.9,
                     direction: "none",
                     random: true,
                     straight: false,

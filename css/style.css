@@ -1,17 +1,17 @@
 /* Variables y reset - PALETA SOLICITADA */
 :root {
     /* Colores de la paleta */
-    --black: #19191c;
+    --black: #000000;
     --pink: #06b2f1;
     --violet: #010655;
     --gray-dark: #1f3428;
-    --white: #ffffff;
+    --white: #fffbfb;
     --purple: #f80b42;
     --red: #f7fafd; 
     --blue: #760fec;  
     
     /* Variantes de colores */
-    --black-dark: #07bdff;
+    --black-dark: #3281ff;
     --black-light: #b8f407;
     --pink-dark: #2b0200;
     --pink-light: #ff7d03;
@@ -429,8 +429,7 @@ text-shadow:
     margin-right: auto;
     opacity: 0.9;
     line-height: 1.6;
-    text-shadow:
-    0 0 30px rgba(9, 9, 9, 0.5);
+    font-weight: 700;
 }
 .hero-buttons-enhanced {
     display: flex;
