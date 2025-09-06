@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portafolio - ValdryaINC</title>
+    <title data-i18n="meta.title">Portafolio - ValdryaINC</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,7 +17,33 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h2>Valdrya<span>INC</span></h2>
+                <h2>
+                    <span data-i18n="header.brand">Valdrya</span>
+                    <span data-i18n="header.inc">INC</span>
+                </h2>
+            </div>
+            <div class="lang-switcher-container">
+                <div class="lang-switcher">
+                    <div class="selected-lang" id="selected-lang">
+                        <img class="flag-icon" src="assets/flags/us.svg" alt="EN">
+                        <span class="lang-text">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <ul class="lang-list">
+                        <li data-lang="es">
+                            <img class="flag-icon" src="assets/flags/es.svg" alt="SP">
+                            <span class="lang-text" data-i18n="lang.spanish">Spanish</span>
+                        </li>
+                        <li data-lang="en">
+                            <img class="flag-icon" src="assets/flags/us.svg" alt="US">
+                            <span class="lang-text" data-i18n="lang.english">English</span>
+                        </li>
+                        <li data-lang="pt">
+                            <img class="flag-icon" src="assets/flags/pt.svg" alt="PT">
+                            <span class="lang-text" data-i18n="lang.portuguese">Português</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <nav class="navbar">
                 <div class="hamburger">
@@ -26,11 +52,11 @@
                     <span></span>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li><a href="servicios.html" class="nav-link">Servicios</a></li>
-                    <li><a href="portafolio.html" class="nav-link active">Portafolio</a></li>
-                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
-                    <li><a href="contacto.html" class="btn nav-cta">Contacto</a></li>
+                    <li><a href="index.html" class="nav-link"><span data-i18n="nav.home">Inicio</span></a></li>
+                    <li><a href="servicios.html" class="nav-link"><span data-i18n="nav.services">Servicios</span></a></li>
+                    <li><a href="portafolio.html" class="nav-link active"><span data-i18n="nav.portfolio">Portafolio</span></a></li>
+                    <li><a href="nosotros.html" class="nav-link"><span data-i18n="nav.about">Nosotros</span></a></li>
+                    <li><a href="contacto.html" class="btn nav-cta"><span data-i18n="nav.contact">Contacto</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -43,16 +69,21 @@
             <div class="hero-content-enhanced" data-aos="fade-up" data-aos-delay="300">
                 <div class="hero-text-group">
                     <h1 class="hero-title-enhanced">
-                        <span class="title-line">Nuestro <span class="text-gradient">Portafolio</span></span>
+                        <span class="title-line">
+                            <span data-i18n="portfolio.hero_title1">Nuestro</span>
+                            <span class="text-gradient" data-i18n="portfolio.hero_title2">Portafolio</span>
+                        </span>
                     </h1>
-                    <p class="hero-description-enhanced">Descubre algunos de nuestros proyectos más destacados y cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos digitales.</p>
+                    <p class="hero-description-enhanced">
+                        <span data-i18n="portfolio.hero_desc">Descubre algunos de nuestros proyectos más destacados y cómo hemos ayudado a nuestros clientes a alcanzar sus objetivos digitales.</span>
+                    </p>
                     <div class="hero-buttons-enhanced">
                         <a href="contacto.html" class="btn btn-primary btn-large">
-                            <span>¿Tienes un proyecto?</span>
+                            <span data-i18n="portfolio.cta_project">¿Tienes un proyecto?</span>
                             <i class="fas fa-paper-plane"></i>
                         </a>
                         <a href="servicios.html" class="btn btn-secondary btn-large">
-                            <span>Nuestros servicios</span>
+                            <span data-i18n="services.all_services">Nuestros servicios</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
@@ -62,23 +93,22 @@
                         <div class="visual-element-enhanced"></div>
                         <div class="floating-card card-1">
                             <i class="fas fa-laptop-code"></i>
-                            <p>Desarrollo Web</p>
+                            <p><span data-i18n="services.web_title">Desarrollo Web</span></p>
                         </div>
                         <div class="floating-card card-2">
                             <i class="fas fa-mobile-alt"></i>
-                            <p>Apps Móviles</p>
+                            <p><span data-i18n="services.mobile_title">Apps Móviles</span></p>
                         </div>
                         <div class="floating-card card-3">
                             <i class="fas fa-shopping-cart"></i>
-                            <p>E-commerce</p>
+                            <p><span data-i18n="portfolio.tag_ecommerce">E-commerce</span></p>
                         </div>
                         <div class="floating-card card-4">
                             <i class="fas fa-paint-brush"></i>
-                            <p>Diseño UX/UI</p>
+                            <p><span data-i18n="portfolio.tag_uiux">Diseño UX/UI</span></p>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </section>
@@ -87,11 +117,11 @@
     <section class="portfolio-filter">
         <div class="container">
             <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
-                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn active" data-filter="all"><span data-i18n="portfolio.filter_all">Todos</span></button>
+                <button class="filter-btn" data-filter="web"><span data-i18n="portfolio.tag_web">Web</span></button>
+                <button class="filter-btn" data-filter="mobile"><span data-i18n="portfolio.tag_mobile">Mobile</span></button>
+                <button class="filter-btn" data-filter="ecommerce"><span data-i18n="portfolio.tag_ecommerce">E-commerce</span></button>
+                <button class="filter-btn" data-filter="branding"><span data-i18n="portfolio.filter_branding">Branding</span></button>
             </div>
         </div>
     </section>
@@ -111,10 +141,10 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Plataforma Educativa</h3>
-                        <p>Sistema de aprendizaje en línea con dashboard interactivo para estudiantes y profesores.</p>
+                        <h3><span data-i18n="portfolio.project1_title">Plataforma Educativa</span></h3>
+                        <p><span data-i18n="portfolio.project1_desc">Sistema de aprendizaje en línea con dashboard interactivo para estudiantes y profesores.</span></p>
                         <div class="portfolio-tags">
-                            <span>Web</span>
+                            <span data-i18n="portfolio.tag_web">Web</span>
                             <span>React</span>
                             <span>Node.js</span>
                         </div>
@@ -131,10 +161,10 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>App de Fitness</h3>
-                        <p>Aplicación móvil para seguimiento de entrenamientos y planificación nutricional.</p>
+                        <h3><span data-i18n="portfolio.project2_title">App de Fitness</span></h3>
+                        <p><span data-i18n="portfolio.project2_desc">Aplicación móvil para seguimiento de entrenamientos y planificación nutricional.</span></p>
                         <div class="portfolio-tags">
-                            <span>Mobile</span>
+                            <span data-i18n="portfolio.tag_mobile">Mobile</span>
                             <span>React Native</span>
                             <span>Firebase</span>
                         </div>
@@ -151,10 +181,10 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Tienda Online</h3>
-                        <p>E-commerce completo con carrito de compras, pasarela de pagos y panel administrativo.</p>
+                        <h3><span data-i18n="portfolio.project3_title">Tienda Online</span></h3>
+                        <p><span data-i18n="portfolio.project3_desc">E-commerce completo con carrito de compras, pasarela de pagos y panel administrativo.</span></p>
                         <div class="portfolio-tags">
-                            <span>E-commerce</span>
+                            <span data-i18n="portfolio.tag_ecommerce">E-commerce</span>
                             <span>WordPress</span>
                             <span>WooCommerce</span>
                         </div>
@@ -171,10 +201,10 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Dashboard Analytics</h3>
-                        <p>Panel de control para visualización y análisis de datos empresariales en tiempo real.</p>
+                        <h3><span data-i18n="portfolio.project4_title">Dashboard Analytics</span></h3>
+                        <p><span data-i18n="portfolio.project4_desc">Panel de control para visualización y análisis de datos empresariales en tiempo real.</span></p>
                         <div class="portfolio-tags">
-                            <span>Web</span>
+                            <span data-i18n="portfolio.tag_web">Web</span>
                             <span>Vue.js</span>
                             <span>D3.js</span>
                         </div>
@@ -191,12 +221,12 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>Identidad Corporativa</h3>
-                        <p>Rediseño de marca completa para empresa de tecnología, incluyendo logo y manual de marca.</p>
+                        <h3><span data-i18n="portfolio.project5_title">Identidad Corporativa</span></h3>
+                        <p><span data-i18n="portfolio.project5_desc">Rediseño de marca completa para empresa de tecnología, incluyendo logo y manual de marca.</span></p>
                         <div class="portfolio-tags">
-                            <span>Branding</span>
-                            <span>Diseño</span>
-                            <span>UI/UX</span>
+                            <span data-i18n="portfolio.filter_branding">Branding</span>
+                            <span data-i18n="portfolio.tag_design">Diseño</span>
+                            <span data-i18n="portfolio.tag_uiux">UI/UX</span>
                         </div>
                     </div>
                 </div>
@@ -211,10 +241,10 @@
                         </div>
                     </div>
                     <div class="portfolio-info">
-                        <h3>App de Delivery</h3>
-                        <p>Aplicación de entrega de alimentos con seguimiento en tiempo real y sistema de calificaciones.</p>
+                        <h3><span data-i18n="portfolio.project6_title">App de Delivery</span></h3>
+                        <p><span data-i18n="portfolio.project6_desc">Aplicación de entrega de alimentos con seguimiento en tiempo real y sistema de calificaciones.</span></p>
                         <div class="portfolio-tags">
-                            <span>Mobile</span>
+                            <span data-i18n="portfolio.tag_mobile">Mobile</span>
                             <span>Flutter</span>
                             <span>Google Maps</span>
                         </div>
@@ -228,22 +258,22 @@
     <section class="testimonials">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
-                <p class="section-subtitle">Testimonios de proyectos exitosos</p>
+                <h2 class="section-title"><span data-i18n="testimonials.title">Lo que dicen nuestros clientes</span></h2>
+                <p class="section-subtitle"><span data-i18n="testimonials.subtitle">Testimonios de proyectos exitosos</span></p>
             </div>
             <div class="testimonials-slider">
                 <div class="testimonial" data-aos="fade-up" data-aos-delay="100">
                     <div class="testimonial-content">
                         <div class="testimonial-text">
-                            <p>"ValdryaINC transformó por completo nuestra presencia digital. Su equipo profesional entregó un sitio web que superó todas nuestras expectativas."</p>
+                            <p><span data-i18n="testimonials.text1">"ValdryaINC transformó por completo nuestra presencia digital. Su equipo profesional entregó un sitio web que superó todas nuestras expectativas."</span></p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-image">
                                 <div class="image-placeholder"></div>
                             </div>
                             <div class="author-info">
-                                <h4>María González</h4>
-                                <p>CEO, TechSolutions</p>
+                                <h4><span data-i18n="testimonials.author1_name">María González</span></h4>
+                                <p><span data-i18n="testimonials.author1_position">CEO, TechSolutions</span></p>
                             </div>
                         </div>
                     </div>
@@ -251,15 +281,15 @@
                 <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
                     <div class="testimonial-content">
                         <div class="testimonial-text">
-                            <p>"La aplicación móvil que desarrollaron ha sido fundamental para el crecimiento de nuestro negocio. ¡Los recomiendo totalmente!"</p>
+                            <p><span data-i18n="testimonials.text2">"La aplicación móvil que desarrollaron ha sido fundamental para el crecimiento de nuestro negocio. ¡Los recomiendo totalmente!"</span></p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-image">
                                 <div class="image-placeholder"></div>
                             </div>
                             <div class="author-info">
-                                <h4>Carlos Mendoza</h4>
-                                <p>Director, FitLife</p>
+                                <h4><span data-i18n="testimonials.author2_name">Carlos Mendoza</span></h4>
+                                <p><span data-i18n="testimonials.author2_position">Director, FitLife</span></p>
                             </div>
                         </div>
                     </div>
@@ -267,15 +297,15 @@
                 <div class="testimonial" data-aos="fade-up" data-aos-delay="300">
                     <div class="testimonial-content">
                         <div class="testimonial-text">
-                            <p>"Trabajar con ValdryaINC fue una experiencia excepcional. Su atención al detalle y compromiso con el proyecto fueron impresionantes."</p>
+                            <p><span data-i18n="testimonials.text3">"Trabajar con ValdryaINC fue una experiencia excepcional. Su atención al detalle y compromiso con el proyecto fueron impresionantes."</span></p>
                         </div>
                         <div class="testimonial-author">
                             <div class="author-image">
                                 <div class="image-placeholder"></div>
                             </div>
                             <div class="author-info">
-                                <h4>Ana Rodríguez</h4>
-                                <p>Gerente, EduTech</p>
+                                <h4><span data-i18n="testimonials.author3_name">Ana Rodríguez</span></h4>
+                                <p><span data-i18n="testimonials.author3_position">Gerente, EduTech</span></p>
                             </div>
                         </div>
                     </div>
@@ -288,10 +318,10 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content" data-aos="fade-up">
-                <h2>¿Te gustaría tener un proyecto similar?</h2>
-                <p>Contáctanos y hagamos realidad tu idea.</p>
+                <h2><span data-i18n="portfolio.cta_title">¿Te gustaría tener un proyecto similar?</span></h2>
+                <p><span data-i18n="portfolio.cta_desc">Contáctanos y hagamos realidad tu idea.</span></p>
                 <a href="contacto.html" class="btn btn-primary">
-                    <span>Iniciar proyecto</span>
+                    <span data-i18n="portfolio.cta_button">Iniciar proyecto</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -303,45 +333,48 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Valdrya<span>INC</span></h3>
-                    <p>Soluciones digitales a medida para tu negocio.</p>
+                    <h3>
+                        <span data-i18n="footer.brand">Valdrya</span>
+                        <span data-i18n="footer.inc">INC</span>
+                    </h3>
+                    <p><span data-i18n="footer.desc">Soluciones digitales a medida para tu negocio.</span></p>
                     <div class="social-links">
                         <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" title="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Enlaces rápidos</h4>
+                    <h4><span data-i18n="footer.quick_links">Enlaces rápidos</span></h4>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="portafolio.html">Portafolio</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="index.html"><span data-i18n="nav.home">Inicio</span></a></li>
+                        <li><a href="servicios.html"><span data-i18n="nav.services">Servicios</span></a></li>
+                        <li><a href="portafolio.html"><span data-i18n="nav.portfolio">Portafolio</span></a></li>
+                        <li><a href="nosotros.html"><span data-i18n="nav.about">Nosotros</span></a></li>
+                        <li><a href="contacto.html"><span data-i18n="nav.contact">Contacto</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Servicios</h4>
+                    <h4><span data-i18n="footer.services">Servicios</span></h4>
                     <ul>
-                        <li><a href="servicios.html">Desarrollo Web</a></li>
-                        <li><a href="servicios.html">Apps Móviles</a></li>
-                        <li><a href="servicios.html">Estrategias Digitales</a></li>
-                        <li><a href="servicios.html">Consultoría</a></li>
+                        <li><a href="servicios.html"><span data-i18n="services.web_title">Desarrollo Web</span></a></li>
+                        <li><a href="servicios.html"><span data-i18n="services.mobile_title">Apps Móviles</span></a></li>
+                        <li><a href="servicios.html"><span data-i18n="services.digital_title">Estrategias Digitales</span></a></li>
+                        <li><a href="servicios.html"><span data-i18n="services.consulting">Consultoría</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contacto</h4>
+                    <h4><span data-i18n="footer.contact">Contacto</span></h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
-                        <li><i class="fas fa-envelope"></i> info@ValdryaINC.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.address">Av. Principal #123, Ciudad</span></li>
+                        <li><i class="fas fa-phone"></i> <span data-i18n="footer.phone">+1 234 567 890</span></li>
+                        <li><i class="fas fa-envelope"></i> <span data-i18n="footer.email">info@ValdryaINC.com</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 ValdryaINC. Todos los derechos reservados.</p>
+                <p><span data-i18n="footer.copyright">© 2023 ValdryaINC. Todos los derechos reservados.</span></p>
             </div>
         </div>
     </footer>

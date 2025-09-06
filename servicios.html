@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios - ValdryaINC</title>
+    <title data-i18n="meta.title">Servicios - ValdryaINC</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,7 +17,33 @@
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h2>Valdrya<span>INC</span></h2>
+                <h2>
+                    <span data-i18n="header.brand">Valdrya</span>
+                    <span data-i18n="header.inc">INC</span>
+                </h2>
+            </div>
+            <div class="lang-switcher-container">
+                <div class="lang-switcher">
+                    <div class="selected-lang" id="selected-lang">
+                        <img class="flag-icon" src="assets/flags/us.svg" alt="EN">
+                        <span class="lang-text">EN</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <ul class="lang-list">
+                        <li data-lang="es">
+                            <img class="flag-icon" src="assets/flags/es.svg" alt="SP">
+                            <span class="lang-text" data-i18n="lang.spanish">Spanish</span>
+                        </li>
+                        <li data-lang="en">
+                            <img class="flag-icon" src="assets/flags/us.svg" alt="US">
+                            <span class="lang-text" data-i18n="lang.english">English</span>
+                        </li>
+                        <li data-lang="pt">
+                            <img class="flag-icon" src="assets/flags/pt.svg" alt="PT">
+                            <span class="lang-text" data-i18n="lang.portuguese">Português</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <nav class="navbar">
                 <div class="hamburger">
@@ -26,11 +52,11 @@
                     <span></span>
                 </div>
                 <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Inicio</a></li>
-                    <li><a href="servicios.html" class="nav-link active">Servicios</a></li>
-                    <li><a href="portafolio.html" class="nav-link">Portafolio</a></li>
-                    <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
-                    <li><a href="contacto.html" class="btn nav-cta">Contacto</a></li>
+                    <li><a href="index.html" class="nav-link"><span data-i18n="nav.home">Inicio</span></a></li>
+                    <li><a href="servicios.html" class="nav-link active"><span data-i18n="nav.services">Servicios</span></a></li>
+                    <li><a href="portafolio.html" class="nav-link"><span data-i18n="nav.portfolio">Portafolio</span></a></li>
+                    <li><a href="nosotros.html" class="nav-link"><span data-i18n="nav.about">Nosotros</span></a></li>
+                    <li><a href="contacto.html" class="btn nav-cta"><span data-i18n="nav.contact">Contacto</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -43,16 +69,21 @@
             <div class="hero-content-enhanced" data-aos="fade-up" data-aos-delay="300">
                 <div class="hero-text-group">
                     <h1 class="hero-title-enhanced">
-                        <span class="title-line">Nuestros <span class="text-gradient">Servicios</span></span>
+                        <span class="title-line">
+                            <span data-i18n="services.hero_title1">Nuestros</span>
+                            <span class="text-gradient" data-i18n="services.hero_title2">Servicios</span>
+                        </span>
                     </h1>
-                    <p class="hero-description-enhanced">Ofrecemos soluciones digitales integrales para impulsar tu negocio en el mundo digital con tecnología de vanguardia.</p>
+                    <p class="hero-description-enhanced">
+                        <span data-i18n="services.hero_desc">Ofrecemos soluciones digitales integrales para impulsar tu negocio en el mundo digital con tecnología de vanguardia.</span>
+                    </p>
                     <div class="hero-buttons-enhanced">
                         <a href="contacto.html" class="btn btn-primary btn-large">
-                            <span>Solicitar cotización</span>
+                            <span data-i18n="cta.button">Solicitar cotización</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                         <a href="portafolio.html" class="btn btn-secondary btn-large">
-                            <span>Ver portafolio</span>
+                            <span data-i18n="services.hero_portfolio_btn">Ver portafolio</span>
                             <i class="fas fa-briefcase"></i>
                         </a>
                     </div>
@@ -62,24 +93,23 @@
                         <div class="visual-element-enhanced"></div>
                         <div class="floating-card card-1">
                             <i class="fas fa-laptop-code"></i>
-                            <p>Desarrollo Web</p>
+                            <p><span data-i18n="services.web_title">Desarrollo Web</span></p>
                         </div>
                         <div class="floating-card card-2">
                             <i class="fas fa-mobile-alt"></i>
-                            <p>Apps Móviles</p>
+                            <p><span data-i18n="services.mobile_title">Apps Móviles</span></p>
                         </div>
                         <div class="floating-card card-3">
                             <i class="fas fa-chart-line"></i>
-                            <p>Estrategia Digital</p>
+                            <p><span data-i18n="services.digital_title">Estrategia Digital</span></p>
                         </div>
                         <div class="floating-card card-4">
                             <i class="fas fa-lightbulb"></i>
-                            <p>Consultoría</p>
+                            <p><span data-i18n="services.consulting">Consultoría</span></p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
@@ -88,10 +118,10 @@
         <div class="container">
             <div class="services-tabs">
                 <div class="tab-buttons">
-                    <button class="tab-btn active" data-tab="web">Desarrollo Web</button>
-                    <button class="tab-btn" data-tab="mobile">Apps Móviles</button>
-                    <button class="tab-btn" data-tab="strategy">Estrategia Digital</button>
-                    <button class="tab-btn" data-tab="consulting">Consultoría</button>
+                    <button class="tab-btn active" data-tab="web"><span data-i18n="services.web_title">Desarrollo Web</span></button>
+                    <button class="tab-btn" data-tab="mobile"><span data-i18n="services.mobile_title">Apps Móviles</span></button>
+                    <button class="tab-btn" data-tab="strategy"><span data-i18n="services.digital_title">Estrategia Digital</span></button>
+                    <button class="tab-btn" data-tab="consulting"><span data-i18n="services.consulting">Consultoría</span></button>
                 </div>
                 <div class="tab-content">
                     <div class="tab-pane active" id="web">
@@ -100,16 +130,16 @@
                                 <img src="img/Servicios/desarrollo-web.jpg" alt="Desarrollo web moderno y responsive" class="tab-img">
                             </div>
                             <div class="tab-info">
-                                <h2>Desarrollo Web</h2>
-                                <p>Creación de sitios web y aplicaciones web modernas, responsivas y de alto rendimiento. Utilizamos las últimas tecnologías para garantizar que tu presencia web sea impactante y funcional.</p>
+                                <h2><span data-i18n="services.web_title">Desarrollo Web</span></h2>
+                                <p><span data-i18n="services.web_desc">Creación de sitios web y aplicaciones web modernas, responsivas y de alto rendimiento. Utilizamos las últimas tecnologías para garantizar que tu presencia web sea impactante y funcional.</span></p>
                                 <ul>
-                                    <li><i class="fas fa-check"></i> Diseño web responsivo</li>
-                                    <li><i class="fas fa-check"></i> Desarrollo frontend y backend</li>
-                                    <li><i class="fas fa-check"></i> E-commerce y carritos de compra</li>
-                                    <li><i class="fas fa-check"></i> Optimización SEO</li>
-                                    <li><i class="fas fa-check"></i> Integración de APIs</li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.web_responsive">Diseño web responsivo</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.web_frontback">Desarrollo frontend y backend</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.web_ecommerce">E-commerce y carritos de compra</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.web_seo">Optimización SEO</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.web_api">Integración de APIs</span></li>
                                 </ul>
-                                <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                                <a href="contacto.html" class="btn btn-primary"><span data-i18n="cta.button">Solicitar cotización</span></a>
                             </div>
                         </div>
                     </div>
@@ -119,16 +149,16 @@
                                 <img src="img/Servicios/apps-moviles.jpg" alt="Desarrollo de aplicaciones móviles" class="tab-img">
                             </div>
                             <div class="tab-info">
-                                <h2>Apps Móviles</h2>
-                                <p>Desarrollo de aplicaciones nativas e híbridas para iOS y Android. Creamos experiencias móviles intuitivas que conectan con tus usuarios y generan valor para tu negocio.</p>
+                                <h2><span data-i18n="services.mobile_title">Apps Móviles</span></h2>
+                                <p><span data-i18n="services.mobile_desc">Desarrollo de aplicaciones nativas e híbridas para iOS y Android. Creamos experiencias móviles intuitivas que conectan con tus usuarios y generan valor para tu negocio.</span></p>
                                 <ul>
-                                    <li><i class="fas fa-check"></i> Apps nativas para iOS y Android</li>
-                                    <li><i class="fas fa-check"></i> Desarrollo de apps híbridas</li>
-                                    <li><i class="fas fa-check"></i> Diseño UI/UX móvil</li>
-                                    <li><i class="fas fa-check"></i> Integración con servicios web</li>
-                                    <li><i class="fas fa-check"></i> Publicación en stores</li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.mobile_native">Apps nativas para iOS y Android</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.mobile_hybrid">Desarrollo de apps híbridas</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.mobile_uiux">Diseño UI/UX móvil</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.mobile_api">Integración con servicios web</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.mobile_store">Publicación en stores</span></li>
                                 </ul>
-                                <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                                <a href="contacto.html" class="btn btn-primary"><span data-i18n="cta.button">Solicitar cotización</span></a>
                             </div>
                         </div>
                     </div>
@@ -138,16 +168,16 @@
                                 <img src="img/Servicios/estrategias-digitales.jpg" alt="Estrategias digitales" class="tab-img">
                             </div>
                             <div class="tab-info">
-                                <h2>Estrategia Digital</h2>
-                                <p>Planificación y ejecución de estrategias digitales para el éxito de tu proyecto. Analizamos, diseñamos e implementamos soluciones que maximizan tu ROI.</p>
+                                <h2><span data-i18n="services.digital_title">Estrategia Digital</span></h2>
+                                <p><span data-i18n="services.digital_desc">Planificación y ejecución de estrategias digitales para el éxito de tu proyecto. Analizamos, diseñamos e implementamos soluciones que maximizan tu ROI.</span></p>
                                 <ul>
-                                    <li><i class="fas fa-check"></i> Planificación estratégica digital</li>
-                                    <li><i class="fas fa-check"></i> Análisis de mercado y competencia</li>
-                                    <li><i class="fas fa-check"></i> Definición de KPIs y métricas</li>
-                                    <li><i class="fas fa-check"></i> Roadmap de producto</li>
-                                    <li><i class="fas fa-check"></i> Optimización de conversiones</li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.strategy_plan">Planificación estratégica digital</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.strategy_market">Análisis de mercado y competencia</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.strategy_kpi">Definición de KPIs y métricas</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.strategy_roadmap">Roadmap de producto</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.strategy_conversion">Optimización de conversiones</span></li>
                                 </ul>
-                                <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                                <a href="contacto.html" class="btn btn-primary"><span data-i18n="cta.button">Solicitar cotización</span></a>
                             </div>
                         </div>
                     </div>
@@ -157,16 +187,16 @@
                                 <img src="img/Servicios/consultoria.jpg" alt="Consultoría tecnológica" class="tab-img">
                             </div>
                             <div class="tab-info">
-                                <h2>Consultoría Tecnológica</h2>
-                                <p>Asesoramiento especializado para la transformación digital de tu empresa. Te ayudamos a tomar las decisiones tecnológicas correctas para alcanzar tus objetivos.</p>
+                                <h2><span data-i18n="services.consulting">Consultoría Tecnológica</span></h2>
+                                <p><span data-i18n="services.consulting_desc">Asesoramiento especializado para la transformación digital de tu empresa. Te ayudamos a tomar las decisiones tecnológicas correctas para alcanzar tus objetivos.</span></p>
                                 <ul>
-                                    <li><i class="fas fa-check"></i> Auditoría tecnológica</li>
-                                    <li><i class="fas fa-check"></i> Arquitectura de software</li>
-                                    <li><i class="fas fa-check"></i> Migración y modernización</li>
-                                    <li><i class="fas fa-check"></i> Seguridad informática</li>
-                                    <li><i class="fas fa-check"></i> Scalability planning</li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.consulting_audit">Auditoría tecnológica</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.consulting_arch">Arquitectura de software</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.consulting_migration">Migración y modernización</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.consulting_security">Seguridad informática</span></li>
+                                    <li><i class="fas fa-check"></i> <span data-i18n="services.consulting_scalability">Scalability planning</span></li>
                                 </ul>
-                                <a href="contacto.html" class="btn btn-primary">Solicitar cotización</a>
+                                <a href="contacto.html" class="btn btn-primary"><span data-i18n="cta.button">Solicitar cotización</span></a>
                             </div>
                         </div>
                     </div>
@@ -179,29 +209,29 @@
     <section class="process">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="section-title">Nuestro Proceso</h2>
-                <p class="section-subtitle">Cómo trabajamos para garantizar el éxito de tu proyecto</p>
+                <h2 class="section-title"><span data-i18n="process.title">Nuestro Proceso</span></h2>
+                <p class="section-subtitle"><span data-i18n="process.subtitle">Cómo trabajamos para garantizar el éxito de tu proyecto</span></p>
             </div>
             <div class="process-steps">
                 <div class="process-step" data-aos="fade-up" data-aos-delay="100">
                     <div class="step-number">01</div>
-                    <h3>Consulta</h3>
-                    <p>Analizamos tus necesidades y objetivos para entender tu proyecto.</p>
+                    <h3><span data-i18n="process.step1">Consulta</span></h3>
+                    <p><span data-i18n="process.step1_desc">Analizamos tus necesidades y objetivos para entender tu proyecto.</span></p>
                 </div>
                 <div class="process-step" data-aos="fade-up" data-aos-delay="200">
                     <div class="step-number">02</div>
-                    <h3>Planificación</h3>
-                    <p>Diseñamos una estrategia detallada con cronograma y presupuesto.</p>
+                    <h3><span data-i18n="process.step2">Planificación</span></h3>
+                    <p><span data-i18n="process.step2_desc">Diseñamos una estrategia detallada con cronograma y presupuesto.</span></p>
                 </div>
                 <div class="process-step" data-aos="fade-up" data-aos-delay="300">
                     <div class="step-number">03</div>
-                    <h3>Desarrollo</h3>
-                    <p>Implementamos la solución con metodologías ágiles y iterativas.</p>
+                    <h3><span data-i18n="process.step3">Desarrollo</span></h3>
+                    <p><span data-i18n="process.step3_desc">Implementamos la solución con metodologías ágiles y iterativas.</span></p>
                 </div>
                 <div class="process-step" data-aos="fade-up" data-aos-delay="400">
                     <div class="step-number">04</div>
-                    <h3>Lanzamiento</h3>
-                    <p>Desplegamos tu proyecto y garantizamos su correcto funcionamiento.</p>
+                    <h3><span data-i18n="process.step4">Lanzamiento</span></h3>
+                    <p><span data-i18n="process.step4_desc">Desplegamos tu proyecto y garantizamos su correcto funcionamiento.</span></p>
                 </div>
             </div>
         </div>
@@ -211,10 +241,10 @@
     <section class="cta">
         <div class="container">
             <div class="cta-content" data-aos="fade-up">
-                <h2>¿Listo para comenzar tu proyecto?</h2>
-                <p>Contáctanos hoy mismo y recibe una consultoría gratuita para tu idea.</p>
+                <h2><span data-i18n="cta.ready_title">¿Listo para comenzar tu proyecto?</span></h2>
+                <p><span data-i18n="cta.ready_desc">Contáctanos hoy mismo y recibe una consultoría gratuita para tu idea.</span></p>
                 <a href="contacto.html" class="btn btn-primary">
-                    <span>Contactar ahora</span>
+                    <span data-i18n="cta.contact_now">Contactar ahora</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
@@ -226,45 +256,48 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Valdrya<span>INC</span></h3>
-                    <p>Soluciones digitales a medida para tu negocio.</p>
+                    <h3>
+                        <span data-i18n="footer.brand">Valdrya</span>
+                        <span data-i18n="footer.inc">INC</span>
+                    </h3>
+                    <p><span data-i18n="footer.desc">Soluciones digitales a medida para tu negocio.</span></p>
                     <div class="social-links">
                         <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" title="twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" title="instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" title="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-section">
-                    <h4>Enlaces rápidos</h4>
+                    <h4><span data-i18n="footer.quick_links">Enlaces rápidos</span></h4>
                     <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="portafolio.html">Portafolio</a></li>
-                        <li><a href="nosotros.html">Nosotros</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="index.html"><span data-i18n="nav.home">Inicio</span></a></li>
+                        <li><a href="servicios.html"><span data-i18n="nav.services">Servicios</span></a></li>
+                        <li><a href="portafolio.html"><span data-i18n="nav.portfolio">Portafolio</span></a></li>
+                        <li><a href="nosotros.html"><span data-i18n="nav.about">Nosotros</span></a></li>
+                        <li><a href="contacto.html"><span data-i18n="nav.contact">Contacto</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Servicios</h4>
+                    <h4><span data-i18n="footer.services">Servicios</span></h4>
                     <ul>
-                        <li><a href="servicios.html">Desarrollo Web</a></li>
-                        <li><a href="servicios.html">Apps Móviles</a></li>
-                        <li><a href="servicios.html">Estrategias Digitales</a></li>
-                        <li><a href="servicios.html">Consultoría</a></li>
+                        <li><a href="servicios.html"><span data-i18n="services.web_title">Desarrollo Web</span></a></li>
+                        <li><a href="servicios.html"><span data-i18n="services.mobile_title">Apps Móviles</span></a></li>
+                        <li><a href="servicios.html"><span data-i18n="services.digital_title">Estrategias Digitales</span></a></li>
+                        <li><a href="servicios.html"><span data-i18n="services.consulting">Consultoría</span></a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Contacto</h4>
+                    <h4><span data-i18n="footer.contact">Contacto</span></h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Av. Principal #123, Ciudad</li>
-                        <li><i class="fas fa-phone"></i> +1 234 567 890</li>
-                        <li><i class="fas fa-envelope"></i> info@ValdryaINC.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <span data-i18n="footer.address">Av. Principal #123, Ciudad</span></li>
+                        <li><i class="fas fa-phone"></i> <span data-i18n="footer.phone">+1 234 567 890</span></li>
+                        <li><i class="fas fa-envelope"></i> <span data-i18n="footer.email">info@ValdryaINC.com</span></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 ValdryaINC. Todos los derechos reservados.</p>
+                <p><span data-i18n="footer.copyright">&copy; 2023 ValdryaINC. Todos los derechos reservados.</span></p>
             </div>
         </div>
     </footer>

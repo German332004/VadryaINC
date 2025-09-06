@@ -1,60 +1,14 @@
 // Navegación móvil
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Mobile Navigation ---
     const hamburger = document.querySelector('.hamburger');
     const navList = document.querySelector('.nav-list');
-    const preloader = document.querySelector('.preloader');
-    const cursorDot = document.querySelector('[data-cursor-dot]');
-    const cursorOutline = document.querySelector('[data-cursor-outline]');
-    
-    // Preloader
-    window.addEventListener('load', function() {
-        setTimeout(function() {
-            preloader.style.opacity = '0';
-            setTimeout(function() {
-                preloader.style.display = 'none';
-            }, 500);
-        }, 1500);
-    });
-    
-    // Cursor personalizado
-    document.addEventListener('mousemove', function(e) {
-        const posX = e.clientX;
-        const posY = e.clientY;
-        
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
-        
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: 'forwards' });
-    });
-    
-    // Efectos de hover para el cursor
-    const hoverElements = document.querySelectorAll('a, button, .service-card, .portfolio-item');
-    
-    hoverElements.forEach(element => {
-        element.addEventListener('mouseenter', function() {
-            cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
-            cursorOutline.style.borderWidth = '1px';
-        });
-        
-        element.addEventListener('mouseleave', function() {
-            cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
-            cursorOutline.style.borderWidth = '2px';
-        });
-    });
-    
-    // Navegación móvil
     if (hamburger && navList) {
         hamburger.addEventListener('click', function() {
             navList.classList.toggle('active');
+            hamburger.classList.toggle('active');
         });
     }
-    
-    // Cerrar menú al hacer clic en un enlace
     const navLinks = document.querySelectorAll('.nav-list a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -62,14 +16,55 @@ document.addEventListener('DOMContentLoaded', function() {
             hamburger.classList.remove('active');
         });
     });
-    
-    // Animación de scroll suave
+
+    // --- Preloader ---
+    const preloader = document.querySelector('.preloader');
+    window.addEventListener('load', function() {
+        if (preloader) {
+            setTimeout(function() {
+                preloader.style.opacity = '0';
+                setTimeout(function() {
+                    preloader.style.display = 'none';
+                }, 500);
+            }, 1500);
+        }
+    });
+
+    // --- Cursor ---
+    const cursorDot = document.querySelector('[data-cursor-dot]');
+    const cursorOutline = document.querySelector('[data-cursor-outline]');
+    if (cursorDot && cursorOutline) {
+        document.addEventListener('mousemove', function(e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: 'forwards' });
+        });
+        const hoverElements = document.querySelectorAll('a, button, .service-card, .portfolio-item');
+        hoverElements.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                cursorOutline.style.borderWidth = '1px';
+            });
+            element.addEventListener('mouseleave', function() {
+                cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+                cursorOutline.style.borderWidth = '2px';
+            });
+        });
+    }
+
+    // --- Smooth Scroll ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
@@ -79,53 +74,46 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
-    // Animación de elementos al hacer scroll
+
+    // --- Animate on Scroll ---
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('[data-aos]');
-        
         elements.forEach(element => {
             const elementPosition = element.getBoundingClientRect().top;
             const screenPosition = window.innerHeight / 1.3;
-            
             if (elementPosition < screenPosition) {
                 element.classList.add('aos-animate');
             }
         });
     };
-    
-    // Contador de estadísticas
+
+    // --- Stats Counter ---
     const startCounters = function() {
         const counters = document.querySelectorAll('.stat-number');
         const speed = 200;
-        
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-count');
             const count = +counter.innerText;
             const increment = Math.ceil(target / speed);
-            
             if (count < target) {
                 counter.innerText = Math.min(count + increment, target);
                 setTimeout(startCounters, 1);
             }
         });
     };
-    
-    // Iniciar contadores cuando están en viewport
     const statsSection = document.querySelector('.stats');
     let counted = false;
-    
     const checkCounters = function() {
+        if (!statsSection) return;
         const statsPosition = statsSection.getBoundingClientRect().top;
         const screenPosition = window.innerHeight / 1.3;
-        
         if (statsPosition < screenPosition && !counted) {
             startCounters();
             counted = true;
         }
     };
-    
-    // Inicializar partículas si existe el contenedor
+
+    // --- Particles ---
     if (typeof particlesJS !== 'undefined' && document.getElementById('particles-js')) {
         particlesJS('particles-js', {
             particles: {
@@ -216,12 +204,130 @@ document.addEventListener('DOMContentLoaded', function() {
             retina_detect: true
         });
     }
-    
+
     window.addEventListener('scroll', function() {
         animateOnScroll();
         checkCounters();
     });
-    
-    // Ejecutar una vez al cargar la página
     animateOnScroll();
+
+    // --- Language Switcher con Imágenes Locales ---
+    function initLanguageSwitcher() {
+        const langSwitcher = document.querySelector('.lang-switcher');
+        const selectedLang = document.getElementById('selected-lang');
+        const langList = document.querySelector('.lang-list');
+        const langOptions = document.querySelectorAll('.lang-list li');
+
+        // Cargar idioma guardado o usar ingles por defecto
+        const defaultLang = localStorage.getItem('lang') || 'en';
+        loadLanguage(defaultLang);
+        updateSelectedLang(defaultLang);
+
+        // Abrir/cerrar el selector
+        if (selectedLang) {
+            selectedLang.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langList.classList.toggle('active');
+                const icon = document.querySelector('.selected-lang i');
+                if (icon) {
+                    icon.style.transform = langList.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+                }
+            });
+        }
+
+        // Seleccionar un idioma
+        if (langOptions) {
+            langOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    loadLanguage(lang);
+                    updateSelectedLang(lang);
+                    localStorage.setItem('lang', lang);
+                    langList.classList.remove('active');
+                    const icon = document.querySelector('.selected-lang i');
+                    if (icon) {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+        }
+
+        // Cerrar el selector al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            if (langSwitcher && !langSwitcher.contains(e.target)) {
+                langList.classList.remove('active');
+                const icon = document.querySelector('.selected-lang i');
+                if (icon) {
+                    icon.style.transform = 'rotate(0deg)';
+                }
+            }
+        });
+
+        // Ajustar para dispositivos táctiles
+        if ('ontouchstart' in window) {
+            document.querySelectorAll('.lang-list li').forEach(item => {
+                item.style.cursor = 'pointer';
+            });
+        }
+    }
+
+    // Función para actualizar la visualización del idioma seleccionado
+    function updateSelectedLang(lang) {
+        const selectedLang = document.getElementById('selected-lang');
+        const flagImg = selectedLang.querySelector('.flag-icon');
+        const langText = selectedLang.querySelector('.lang-text');
+        if (lang === 'en') {
+            flagImg.src = 'assets/flags/us.svg';
+            flagImg.alt = 'EN';
+            langText.textContent = 'EN';
+        } else if (lang === 'es') {
+            flagImg.src = 'assets/flags/es.svg';
+            flagImg.alt = 'ES';
+            langText.textContent = 'ES';
+        } else if (lang === 'pt') {
+            flagImg.src = 'assets/flags/pt.svg';
+            flagImg.alt = 'PT';
+            langText.textContent = 'PT';
+        }
+    }
+
+    // Función para cargar el idioma
+    function loadLanguage(lang) {
+        fetch(`lang/${lang}.json`)
+            .then(res => {
+                if (!res.ok) {
+                    throw new Error(`Error loading language file: ${res.status}`);
+                }
+                return res.json();
+            })
+            .then(data => {
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const keys = el.getAttribute('data-i18n').split('.');
+                    let text = data;
+                    
+                    for (let i = 0; i < keys.length; i++) {
+                        if (text[keys[i]] === undefined) {
+                            console.warn(`Translation key not found: ${el.getAttribute('data-i18n')}`);
+                            text = '';
+                            break;
+                        }
+                        text = text[keys[i]];
+                    }
+                    
+                    if (text) {
+                        el.textContent = text;
+                    }
+                });
+                
+                if (data.meta && data.meta.title) {
+                    document.title = data.meta.title;
+                }
+            })
+            .catch(error => {
+                console.error('Error loading language file:', error);
+            });
+    }
+
+    // Inicializar el selector de idiomas
+    initLanguageSwitcher();
 });
