@@ -2281,3 +2281,28 @@ section {
         margin-right: 0;
     }
 }
+/* Estilos para el logo SVG */
+.logo-png {
+    height: 60px; /* Ajusta según necesites */
+    width: auto;
+    transition: var(--transition);
+}
+
+/* Efecto hover para el logo */
+.logo-png:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .logo-png {
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-png {
+        height: 30px;
+    }
+}
