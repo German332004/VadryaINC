@@ -54,7 +54,10 @@ body {
     padding: 0 20px;
 }
 
-/* Preloader */
+/* ==================== */
+/* PRELOADER MODERNO Y EN TENDENCIA */
+/* ==================== */
+
 .preloader {
     position: fixed;
     top: 0;
@@ -63,43 +66,291 @@ body {
     height: 100%;
     background: var(--black);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    overflow: hidden;
 }
 
-.preloader-container {
-    width: 200px;
-    height: 3px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: visible;
+/* Efecto de partículas de fondo */
+.preloader::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(131, 56, 236, 0.15) 0%, transparent 20%),
+        radial-gradient(circle at 80% 70%, rgba(6, 178, 241, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 40% 80%, rgba(247, 10, 66, 0.1) 0%, transparent 20%);
+    animation: particle-move 20s infinite linear;
+}
+
+@keyframes particle-move {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+/* Logo animado */
+.preloader-logo {
+    position: relative;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: logo-appear 1s ease-out 0.5s forwards;
+}
+
+.preloader-logo h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--white);
+    text-align: center;
+}
+
+.preloader-logo span {
+    background: var(--gradient-title);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
     position: relative;
 }
 
+/* Efecto de brillo en el logo */
+.preloader-logo::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: var(--gradient-title);
+    filter: blur(20px);
+    opacity: 0.3;
+    z-index: -1;
+    animation: logo-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logo-glow {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.4; }
+}
+
+@keyframes logo-appear {
+    0% { 
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Contenedor de la barra de progreso mejorado */
+.preloader-container {
+    width: 280px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(131, 56, 236, 0.2);
+}
+
+/* Barra de progreso con gradiente y efecto de brillo */
 .preloader-line {
     position: absolute;
     height: 100%;
-    width: 50%;
+    width: 40%;
     background: var(--gradient-secondary);
     border-radius: 10px;
-    animation: preloaderAnimation 1.5s infinite ease-in-out;
+    animation: preloaderAnimation 1.8s infinite cubic-bezier(0.65, 0, 0.35, 1);
+    box-shadow: 
+        0 0 20px rgba(131, 56, 236, 0.5),
+        0 0 40px rgba(6, 178, 241, 0.3);
 }
 
-.preloader-text {
-    color: var(--white);
-    margin-top: 20px;
-    text-align: center;
-    font-size: 14px;
-    letter-spacing: 1px;
+/* Efecto de partículas que siguen la barra */
+.preloader-line::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background: var(--white);
+    border-radius: 50%;
+    animation: particle-follow 1.8s infinite cubic-bezier(0.65, 0, 0.35, 1);
+    box-shadow: 0 0 10px var(--white), 0 0 20px var(--white);
 }
 
 @keyframes preloaderAnimation {
     0% {
-        left: -50%;
+        left: -40%;
     }
     100% {
-        left: 150%;
+        left: 140%;
+    }
+}
+
+@keyframes particle-follow {
+    0% {
+        transform: translateX(0) scale(0.8);
+        opacity: 0.7;
+    }
+    50% {
+        transform: translateX(0) scale(1.2);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0) scale(0.8);
+        opacity: 0.7;
+    }
+}
+
+/* Texto de carga con efecto de typing */
+.preloader-text {
+    color: var(--white);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: text-appear 0.5s ease-out 1s forwards;
+}
+
+/* Efecto de máquina de escribir */
+.preloader-text::after {
+    content: '|';
+    animation: typing 1s infinite;
+    opacity: 0;
+}
+
+@keyframes text-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Porcentaje de carga (opcional) */
+.preloader-percentage {
+    color: var(--white);
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.6;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Efectos de salida al completar la carga */
+.preloader.loaded {
+    animation: preloader-out 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.preloader.loaded .preloader-logo {
+    animation: logo-out 0.6s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.preloader.loaded .preloader-container,
+.preloader.loaded .preloader-text,
+.preloader.loaded .preloader-percentage {
+    animation: fade-out 0.5s ease-out forwards;
+}
+
+@keyframes preloader-out {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+        visibility: hidden;
+    }
+}
+
+@keyframes logo-out {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes fade-out {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Efecto de confeti al completar (opcional) */
+.preloader-confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 8px;
+    height: 16px;
+    opacity: 0;
+}
+
+.preloader.loaded .confetti-piece {
+    animation: confetti 1s ease-out forwards;
+}
+
+@keyframes confetti {
+    0% {
+        opacity: 1;
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+
+/* Responsive design para el preloader */
+@media (max-width: 768px) {
+    .preloader-logo h2 {
+        font-size: 2.2rem;
+    }
+    
+    .preloader-container {
+        width: 200px;
+    }
+    
+    .preloader-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .preloader-logo h2 {
+        font-size: 1.8rem;
+    }
+    
+    .preloader-container {
+        width: 180px;
+        height: 3px;
     }
 }
 

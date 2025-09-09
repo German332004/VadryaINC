@@ -64,7 +64,7 @@
     "strategy_kpi": "Definição de KPIs e métricas",
     "strategy_roadmap": "Roteiro do produto",
     "strategy_conversion": "Otimização de conversões",
-    "consulting_desc": "Aconselhamento especializado para a transformação digital da sua empresa. Ajudamos você a tomar as decisões tecnológicas corretas para alcançar seus objetivos.",
+    "consulting_desc": "Aconselhamento especializado para la transformação digital da sua empresa. Ajudamos você a tomar as decisões tecnológicas corretas para alcançar seus objetivos.",
     "consulting_audit": "Auditoria tecnológica",
     "consulting_arch": "Arquitetura de software",
     "consulting_migration": "Migração e modernização",
@@ -116,7 +116,7 @@
     "step1": "Consulta",
     "step1_desc": "Analisamos suas necessidades e objetivos para entender seu projeto.",
     "step2": "Planejamento",
-    "step2_desc": "Projetamos uma estratégia detalhada com cronograma and orçamento.",
+    "step2_desc": "Projetamos uma estratégia detalhada com cronograma e orçamento.",
     "step3": "Desenvolvimento",
     "step3_desc": "Implementamos a solução com metodologias ágeis e iterativas.",
     "step4": "Lançamento",
@@ -131,9 +131,45 @@
     "text2": "\"O aplicativo móvel que desenvolveram tem sido fundamental para o crescimento do nosso negócio. Eu os recomendo totalmente!\"",
     "author2_name": "Carlos Mendoza",
     "author2_position": "Diretor, FitLife",
-    "text3": "\"Trabalhar com a ValdryaINC foi uma experiência excepcional. Sua atenção aos detalhes and comprometimento com o projeto foram impressionantes.\"",
+    "text3": "\"Trabalhar com a ValdryaINC foi uma experiência excepcional. Sua atenção aos detalhes e comprometimento com o projeto foram impressionantes.\"",
     "author3_name": "Ana Rodriguez",
     "author3_position": "Gerente, EduTech"
+  },
+  "about": {
+    "hero_title1": "Sobre",
+    "hero_title2": "Nós",
+    "hero_desc": "Conheça a história, valores e equipe por trás da ValdryaINC. Descubra o que nos torna diferentes e por que somos a escolha ideal para o seu projeto digital.",
+    "contact_team": "Contatar equipe",
+    "stat1": "8+ Anos de experiência",
+    "stat2": "150+ Projetos",
+    "stat3": "95% Clientes satisfeitos",
+    "stat4": "Equipe certificada",
+    "history_title": "Nossa História",
+    "history_desc1": "A ValdryaINC nasceu em 2015 com a visão de transformar ideias em experiências digitales excepcionais. Desde nossos humildes começos como uma pequena equipe de desenvolvedores apaixonados, crescemos até nos tornarmos uma agência digital líder, trabalhando con clientes de diversos setores e tamanhos.",
+    "history_desc2": "Nossa jornada começou quando identificamos uma lacuna no mercado: muitas empresas precisavam de soluções digitais de qualidade, mas careciam de acesso à expertise técnica e estratégica. Decidimos fechar essa lacuna oferecendo serviços abrangentes que combinam criatividade, tecnologia e estratégia.",
+    "stat_clients": "Clientes satisfeitos",
+    "values_title": "Nossos Valores",
+    "values_subtitle": "Os princípios que guiam nosso trabalho",
+    "value1_title": "Inovação",
+    "value1_desc": "Buscamos constantemente novas formas de resolver problemas e melhorar soluções.",
+    "value2_title": "Transparência",
+    "value2_desc": "Mantemos uma comunicação clara e honesta em todos os nossos projetos.",
+    "value3_title": "Qualidade",
+    "value3_desc": "Comprometemo-nos a entregar trabalho excepcional em cada projeto.",
+    "value4_title": "Colaboração",
+    "value4_desc": "Trabalhamos junto com nossos clientes como parceiros estratégicos.",
+    "team_title": "Nossa Equipe",
+    "team_subtitle": "Os talentosos profissionais por trás da ValdryaINC",
+    "team_member1_name": "Carlos Rodríguez",
+    "team_member1_position": "CEO & Fundador",
+    "team_member2_name": "Ana Martínez",
+    "team_member2_position": "Diretora de Design",
+    "team_member3_name": "Javier López",
+    "team_member3_position": "Líder de Desenvolvimento",
+    "team_member4_name": "María González",
+    "team_member4_position": "Especialista em Marketing",
+    "cta_title": "Pronto para trabalhar conosco?",
+    "cta_desc": "Junte-se à nossa lista de clientes satisfeitos e vamos começar a transformar sua ideia em realidade."
   },
   "cta": {
     "title": "Tem um projeto em mente?",
@@ -154,5 +190,57 @@
     "phone": "+1 234 567 890",
     "email": "info@ValdryaINC.com",
     "copyright": "© 2023 ValdryaINC. Todos os direitos reservados."
+  },
+  "contact": {
+    "meta": {
+      "title": "Contato - ValdryaINC"
+    },
+    "hero": {
+      "title1": "Entre em ",
+      "title2": "Contato",
+      "description": "Tem um projeto em mente? Vamos conversar sobre como podemos ajudá-lo a torná-lo realidade. Estamos aqui para responder todas as suas perguntas.",
+      "contact_btn": "Envie-nos uma mensagem",
+      "services_btn": "Nossos serviços",
+      "card1": "Localização",
+      "card4": "Seg - Sex: 9:00 - 18:00"
+    },
+    "info": {
+      "title": "Informações de Contato",
+      "description": "Estamos aqui para responder qualquer pergunta que você tenha e ajudá-lo a encontrar a melhor solução para suas necessidades. Não hesite em entrar em contato conosco.",
+      "address_title": "Endereço",
+      "address": "Av. Principal #123, Cidade, País",
+      "phone_title": "Telefone",
+      "email_title": "Email",
+      "hours_title": "Horário",
+      "hours": "Seg - Sex: 9:00 - 18:00"
+    },
+    "form": {
+      "title": "Envie-nos uma Mensagem",
+      "name_label": "Nome completo *",
+      "email_label": "Endereço de email *",
+      "phone_label": "Telefone",
+      "service_label": "Serviço de interesse",
+      "service_default": "Selecione um serviço",
+      "other": "Outro",
+      "message_label": "Mensagem *",
+      "submit_btn": "Enviar mensagem"
+    },
+    "map": {
+      "title": "Nossa Localização",
+      "subtitle": "Visite-nos em nosso escritório ou entre em contato remotamente",
+      "placeholder": "Mapa interativo aqui"
+    },
+    "faq": {
+      "title": "Perguntas Frequentes",
+      "subtitle": "Respostas às dúvidas mais comuns",
+      "q1": "Qual é o processo para começar um projeto?",
+      "a1": "Nosso processo começa com uma consulta inicial onde discutimos suas necessidades e objetivos. Em seguida, realizamos uma análise e apresentamos uma proposta detalhada com cronograma e orçamento. Uma vez aprovado, formamos a equipe e iniciamos o desenvolvimento com reuniões regulares para mantê-lo informado.",
+      "q2": "Quais metodologias de desenvolvimento vocês utilizam?",
+      "a2": "Trabalhamos principalmente com metodologias ágeis (Scrum e Kanban) que nos permitem nos adaptar a mudanças e entregar valor de forma incremental. Isso garante transparência, flexibilidade e a entrega de um produto que realmente atenda às suas necessidades.",
+      "q3": "Vocês oferecem manutenção após o lançamento?",
+      "a3": "Sim, oferecemos diversos planos de manutenção e suporte pós-lançamento que incluem atualizações, monitoramento, backups e resolução de incidentes. Podemos personalizar um plano de acordo com as necessidades específicas do seu projeto.",
+      "q4": "Vocês trabalham com empresas internacionais?",
+      "a4": "Absolutamente. Temos experiência trabalhando com clientes de diferentes países e estamos equipados para lidar com projetos remotamente com reuniões virtuais, ferramentas de colaboração e comunicação em vários idiomas."
+    }
   }
 }

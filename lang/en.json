@@ -135,6 +135,42 @@
     "author3_name": "Ana Rodriguez",
     "author3_position": "Manager, EduTech"
   },
+  "about": {
+    "hero_title1": "About",
+    "hero_title2": "Us",
+    "hero_desc": "Learn about the history, values and team behind ValdryaINC. Discover what makes us different and why we are the ideal choice for your digital project.",
+    "contact_team": "Contact team",
+    "stat1": "8+ Years of experience",
+    "stat2": "150+ Projects",
+    "stat3": "95% Satisfied clients",
+    "stat4": "Certified team",
+    "history_title": "Our History",
+    "history_desc1": "ValdryaINC was born in 2015 with the vision of transforming ideas into exceptional digital experiences. From our humble beginnings as a small team of passionate developers, we have grown to become a leading digital agency, working with clients from various sectors and sizes.",
+    "history_desc2": "Our journey began when we identified a gap in the market: many companies needed quality digital solutions but lacked access to technical and strategic expertise. We decided to close that gap by offering comprehensive services that combine creativity, technology and strategy.",
+    "stat_clients": "Satisfied clients",
+    "values_title": "Our Values",
+    "values_subtitle": "The principles that guide our work",
+    "value1_title": "Innovation",
+    "value1_desc": "We constantly seek new ways to solve problems and improve solutions.",
+    "value2_title": "Transparency",
+    "value2_desc": "We maintain clear and honest communication in all our projects.",
+    "value3_title": "Quality",
+    "value3_desc": "We are committed to delivering exceptional work on every project.",
+    "value4_title": "Collaboration",
+    "value4_desc": "We work together with our clients as strategic partners.",
+    "team_title": "Our Team",
+    "team_subtitle": "The talented professionals behind ValdryaINC",
+    "team_member1_name": "Carlos Rodríguez",
+    "team_member1_position": "CEO & Founder",
+    "team_member2_name": "Ana Martínez",
+    "team_member2_position": "Design Director",
+    "team_member3_name": "Javier López",
+    "team_member3_position": "Development Lead",
+    "team_member4_name": "María González",
+    "team_member4_position": "Marketing Specialist",
+    "cta_title": "Ready to work with us?",
+    "cta_desc": "Join our list of satisfied clients and let's start transforming your idea into reality."
+  },
   "cta": {
     "title": "Do you have a project in mind?",
     "subtitle": "Contact us and let's turn your idea into a successful digital solution.",
@@ -154,5 +190,57 @@
     "phone": "+1 234 567 890",
     "email": "info@ValdryaINC.com",
     "copyright": "© 2023 ValdryaINC. All rights reserved."
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact - ValdryaINC"
+    },
+    "hero": {
+      "title1": "Get in ",
+      "title2": "Contact",
+      "description": "Do you have a project in mind? Let's talk about how we can help you make it a reality. We're here to answer all your questions.",
+      "contact_btn": "Send us a message",
+      "services_btn": "Our services",
+      "card1": "Location",
+      "card4": "Mon - Fri: 9:00 - 18:00"
+    },
+    "info": {
+      "title": "Contact Information",
+      "description": "We're here to answer any questions you may have and help you find the best solution for your needs. Don't hesitate to get in touch with us.",
+      "address_title": "Address",
+      "address": "Main Ave #123, City, Country",
+      "phone_title": "Phone",
+      "email_title": "Email",
+      "hours_title": "Schedule",
+      "hours": "Mon - Fri: 9:00 - 18:00"
+    },
+    "form": {
+      "title": "Send us a Message",
+      "name_label": "Full name *",
+      "email_label": "Email address *",
+      "phone_label": "Phone",
+      "service_label": "Service of interest",
+      "service_default": "Select a service",
+      "other": "Other",
+      "message_label": "Message *",
+      "submit_btn": "Send message"
+    },
+    "map": {
+      "title": "Our Location",
+      "subtitle": "Visit us at our office or contact us remotely",
+      "placeholder": "Interactive map here"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Answers to the most common questions",
+      "q1": "What is the process to start a project?",
+      "a1": "Our process begins with an initial consultation where we discuss your needs and objectives. Then, we conduct an analysis and present you with a detailed proposal with timeline and budget. Once approved, we form the team and begin development with regular meetings to keep you informed.",
+      "q2": "What development methodologies do you use?",
+      "a2": "We mainly work with agile methodologies (Scrum and Kanban) that allow us to adapt to changes and deliver value incrementally. This ensures transparency, flexibility and the delivery of a product that truly fits your needs.",
+      "q3": "Do you offer maintenance after launch?",
+      "a3": "Yes, we offer various maintenance and post-launch support plans that include updates, monitoring, backups and incident resolution. We can customize a plan according to the specific needs of your project.",
+      "q4": "Do you work with international companies?",
+      "a4": "Absolutely. We have experience working with clients from different countries and are equipped to handle projects remotely with virtual meetings, collaboration tools and communication in multiple languages."
+    }
   }
 }
