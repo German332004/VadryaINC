@@ -17,18 +17,56 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // --- Preloader ---
-    const preloader = document.querySelector('.preloader');
+    // --- Preloader Mejorado ---
+const preloader = document.querySelector('.preloader');
+const preloaderPercentage = document.querySelector('.preloader-percentage');
+
+if (preloader) {
+    // Mostrar preloader inmediatamente
+    preloader.style.display = 'flex';
+    
+    // Simular progreso de carga
+    let progress = 0;
+    const progressInterval = setInterval(() => {
+        progress += Math.random() * 10;
+        if (progress > 100) progress = 100;
+        
+        if (preloaderPercentage) {
+            preloaderPercentage.textContent = `${Math.round(progress)}%`;
+        }
+        
+        if (progress === 100) {
+            clearInterval(progressInterval);
+        }
+    }, 200);
+    
     window.addEventListener('load', function() {
-        if (preloader) {
+        // Esperar un mínimo de 2 segundos para asegurar que se vea el preloader
+        setTimeout(function() {
+            if (preloaderPercentage) {
+                preloaderPercentage.textContent = '100%';
+            }
+            
             setTimeout(function() {
-                preloader.style.opacity = '0';
+                preloader.classList.add('loaded');
+                
                 setTimeout(function() {
                     preloader.style.display = 'none';
-                }, 500);
-            }, 1500);
-        }
+                }, 800);
+            }, 500);
+        }, 2000);
     });
+    
+    // Fallback: ocultar después de 5 segundos máximo
+    setTimeout(function() {
+        if (!preloader.classList.contains('loaded')) {
+            preloader.classList.add('loaded');
+            setTimeout(function() {
+                preloader.style.display = 'none';
+            }, 800);
+        }
+    }, 5000);
+}
 
     // --- Cursor ---
     const cursorDot = document.querySelector('[data-cursor-dot]');

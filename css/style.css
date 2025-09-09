@@ -55,7 +55,7 @@ body {
 }
 
 /* ==================== */
-/* PRELOADER MODERNO Y EN TENDENCIA */
+/* PRELOADER MODERNO - PALETA VALDRYAINC */
 /* ==================== */
 
 .preloader {
@@ -93,61 +93,28 @@ body {
     100% { transform: translate(0, 0) rotate(360deg); }
 }
 
-/* Logo animado */
+/* Logo del preloader */
 .preloader-logo {
     position: relative;
     margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     opacity: 0;
     animation: logo-appear 1s ease-out 0.5s forwards;
+    z-index: 2;
 }
 
-.preloader-logo h2 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: var(--white);
-    text-align: center;
+.preloader-logo-img {
+    width: 150px;
+    height: auto;
+    filter: drop-shadow(0 0 20px var(--pink-light));
+    animation: pulse-logo 2s infinite ease-in-out;
 }
 
-.preloader-logo span {
-    background: var(--gradient-title);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    position: relative;
-}
 
-/* Efecto de brillo en el logo */
-.preloader-logo::after {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    background: var(--gradient-title);
-    filter: blur(20px);
-    opacity: 0.3;
-    z-index: -1;
-    animation: logo-glow 2s ease-in-out infinite alternate;
-}
 
-@keyframes logo-glow {
-    0% { opacity: 0.2; }
-    100% { opacity: 0.4; }
-}
-
-@keyframes logo-appear {
-    0% { 
-        opacity: 0;
-        transform: translateY(30px) scale(0.9);
-    }
-    100% { 
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-/* Contenedor de la barra de progreso mejorado */
+/* Contenedor de la barra de progreso */
 .preloader-container {
     width: 280px;
     height: 4px;
@@ -159,7 +126,7 @@ body {
     box-shadow: 0 0 10px rgba(131, 56, 236, 0.2);
 }
 
-/* Barra de progreso con gradiente y efecto de brillo */
+/* Barra de progreso con gradiente */
 .preloader-line {
     position: absolute;
     height: 100%;
@@ -172,7 +139,7 @@ body {
         0 0 40px rgba(6, 178, 241, 0.3);
 }
 
-/* Efecto de partículas que siguen la barra */
+/* Efecto de partícula que sigue la barra */
 .preloader-line::after {
     content: '';
     position: absolute;
@@ -186,13 +153,41 @@ body {
     box-shadow: 0 0 10px var(--white), 0 0 20px var(--white);
 }
 
+/* Texto de carga */
+.preloader-text {
+    color: var(--white);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    animation: text-appear 0.5s ease-out 1s forwards;
+}
+
+/* Efecto de máquina de escribir */
+.preloader-text::after {
+    content: '|';
+    animation: typing 1s infinite;
+    opacity: 0;
+}
+
+/* Porcentaje de carga (opcional) */
+.preloader-percentage {
+    color: var(--white);
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.6;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* ==================== */
+/* ANIMACIONES DEL PRELOADER */
+/* ==================== */
+
 @keyframes preloaderAnimation {
-    0% {
-        left: -40%;
-    }
-    100% {
-        left: 140%;
-    }
+    0% { left: -40%; }
+    100% { left: 140%; }
 }
 
 @keyframes particle-follow {
@@ -210,22 +205,37 @@ body {
     }
 }
 
-/* Texto de carga con efecto de typing */
-.preloader-text {
-    color: var(--white);
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-align: center;
-    position: relative;
-    opacity: 0;
-    animation: text-appear 0.5s ease-out 1s forwards;
+@keyframes logo-appear {
+    0% { 
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+    }
+    100% { 
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
 }
 
-/* Efecto de máquina de escribir */
-.preloader-text::after {
-    content: '|';
-    animation: typing 1s infinite;
-    opacity: 0;
+@keyframes pulse-logo {
+    0%, 100% { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+    50% { 
+        transform: scale(1.05); 
+        opacity: 0.9; 
+    }
+}
+
+@keyframes logo-glow {
+    0% { 
+        opacity: 0.3; 
+        transform: translate(-50%, -50%) scale(0.95); 
+    }
+    100% { 
+        opacity: 0.6; 
+        transform: translate(-50%, -50%) scale(1.05); 
+    }
 }
 
 @keyframes text-appear {
@@ -244,17 +254,10 @@ body {
     50% { opacity: 1; }
 }
 
-/* Porcentaje de carga (opcional) */
-.preloader-percentage {
-    color: var(--white);
-    font-size: 12px;
-    margin-top: 10px;
-    opacity: 0.6;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
+/* ==================== */
+/* EFECTOS DE SALIDA */
+/* ==================== */
 
-/* Efectos de salida al completar la carga */
 .preloader.loaded {
     animation: preloader-out 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
 }
@@ -297,45 +300,22 @@ body {
     100% { opacity: 0; }
 }
 
-/* Efecto de confeti al completar (opcional) */
-.preloader-confetti {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -1;
-}
+/* ==================== */
+/* RESPONSIVE DESIGN */
+/* ==================== */
 
-.confetti-piece {
-    position: absolute;
-    width: 8px;
-    height: 16px;
-    opacity: 0;
-}
-
-.preloader.loaded .confetti-piece {
-    animation: confetti 1s ease-out forwards;
-}
-
-@keyframes confetti {
-    0% {
-        opacity: 1;
-        transform: translateY(0) rotate(0deg);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(100vh) rotate(720deg);
-    }
-}
-
-/* Responsive design para el preloader */
 @media (max-width: 768px) {
-    .preloader-logo h2 {
-        font-size: 2.2rem;
+    .preloader-logo-img {
+        width: 120px;
+    }
+    
+    .preloader-logo::after {
+        width: 150px;
+        height: 150px;
     }
     
     .preloader-container {
-        width: 200px;
+        width: 220px;
     }
     
     .preloader-text {
@@ -344,8 +324,13 @@ body {
 }
 
 @media (max-width: 480px) {
-    .preloader-logo h2 {
-        font-size: 1.8rem;
+    .preloader-logo-img {
+        width: 100px;
+    }
+    
+    .preloader-logo::after {
+        width: 130px;
+        height: 130px;
     }
     
     .preloader-container {
@@ -2106,7 +2091,7 @@ section {
     width: 80px;
     cursor:pointer;
     z-index: 1001;
-    left: 180px;
+    left: 140px;
    
 }
 
@@ -2122,7 +2107,7 @@ section {
     color: white;
     font-weight: 500;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    gap: 8px;
+    gap: 15px;
     min-width: auto;
 }
 
@@ -2281,28 +2266,28 @@ section {
         margin-right: 0;
     }
 }
-/* Estilos para el logo SVG */
+/* Estilos para el logo PNG */
 .logo-png {
-    height: 60px; /* Ajusta según necesites */
-    width: auto;
+    height: 70px; /* Ajusta según necesites */
+    width:auto;
     transition: var(--transition);
 }
 
 /* Efecto hover para el logo */
 .logo-png:hover {
     transform: scale(1.05);
-    opacity: 0.9;
+    opacity: 1;
 }
 
 /* Ajustes responsivos */
 @media (max-width: 768px) {
     .logo-png {
-        height: 35px;
+        height: 60px;
     }
 }
 
 @media (max-width: 480px) {
     .logo-png {
-        height: 30px;
+        height: 60px;
     }
 }
