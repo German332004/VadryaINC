@@ -543,8 +543,8 @@ body {
 
 .btn-secondary {
     background: transparent;
-    color: var(--violet);
-    border: 2px solid var(--violet);
+    color: var(--white);
+    border: 2px solid var(--white);
 }
 
 .btn-secondary:hover {
@@ -1173,7 +1173,7 @@ section {
 }
 
 .social-links a:hover {
-    background: var(--pink);
+    background: var(--black);
     transform: translateY(-5px);
 }
 
