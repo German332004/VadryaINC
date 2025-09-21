@@ -6,9 +6,9 @@
     --violet: #010655;
     --gray-dark: #1f3428;
     --white: #fffbfb;
-    --purple: #f80b42;
-    --red: #f7fafd; 
-    --blue: #760fec;  
+    --purple: #adfbff;
+    --red: #37ff00; 
+    --blue: #37ff00;  
     
     /* Variantes de colores */
     --black-dark: #3281ff;
@@ -981,7 +981,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(131, 56, 236, 0.8);
+    background: rgba(152, 211, 234, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1317,6 +1317,12 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.tab-img-Portfolio {
+    width: 100%;
+    height: 100%;
+    object-fit:;
     transition: transform 0.5s ease;
 }
 
